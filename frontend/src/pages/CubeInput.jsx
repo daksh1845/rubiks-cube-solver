@@ -218,7 +218,7 @@ const CubeInput = () => {
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:8000/solve/', cubeState);
+      const response = await axios.post('https://rubiks-cube-solver-2ztj.onrender.com/solve/', cubeState);
       if (response.data.success) {
         navigate('/solve', { state: { solution: response.data.solution, cubeState: cubeState } });
       } else {
